@@ -1,0 +1,16 @@
+{
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "mocha": true
+  },
+  "globals": {
+    "assert": true
+  },
+  "rules": {
+    "quotes": [1, "single"]
+  }
+}
