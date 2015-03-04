@@ -71,7 +71,7 @@ module.exports = function(grunt) {
       build: {
         options: {
           debug: true,
-          transform: ['reactify']
+          transform: ['babelify']
         },
         files: {
           'public/dist/task-react-sample.js': jsClientFiles
@@ -80,7 +80,7 @@ module.exports = function(grunt) {
       test: {
         options: {
           debug: true,
-          transform: ['reactify']
+          transform: ['babelify']
         },
         files: {
           'test/public/dist/task-react-sample-spec.js': jsClientSpecFiles

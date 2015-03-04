@@ -11,7 +11,7 @@
     "URIjs": "1.14.2"
   },
   "devDependencies": {
-    "reactify": "1.0.0",
+    "babelify": "5.0.3",
     "es5-shim": "4.1.0",
     "grunt": "0.4.5",
     "load-grunt-tasks": "3.1.0",
