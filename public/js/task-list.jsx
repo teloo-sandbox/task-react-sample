@@ -36,7 +36,7 @@ var TaskList = React.createClass({
           <thead>
             <tr>
               <th className="col-xs-1">
-                <div class="checkbox">
+                <div>
                   <label>
                     <input type="checkbox" />
                   </label>
@@ -49,7 +49,7 @@ var TaskList = React.createClass({
           <tbody>
             <tr>
               <td>
-                <div class="checkbox">
+                <div>
                   <label>
                     <input type="checkbox" />
                   </label>
