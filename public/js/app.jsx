@@ -8,7 +8,7 @@ var Header = require('./header.jsx');
 var App = React.createClass({
   render: function() {
     return (
-      <div>
+      <div className="container">
         <header>
           <Header />
         </header>

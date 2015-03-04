@@ -21,6 +21,17 @@ describe('TaskList', function() {
 
     // toolbar
     var toolbar = ReactTestUtils.findRenderedDOMComponentWithClass(instance, 'task-list-toolbar');
+    var buttons = ReactTestUtils.scryRenderedDOMComponentsWithTag(toolbar, 'button');
+
+    var button0Icon = ReactTestUtils.findRenderedDOMComponentWithTag(buttons[0], 'span');
+    assert.equal(button0Icon.getDOMNode().className, 'glyphicon glyphicon-refresh');
+
+    var button1Icon = ReactTestUtils.findRenderedDOMComponentWithTag(buttons[1], 'span');
+    assert.equal(button1Icon.getDOMNode().className, 'glyphicon glyphicon-ok');
+
+    var button2Icon = ReactTestUtils.findRenderedDOMComponentWithTag(buttons[2], 'span');
+    assert.equal(button2Icon.getDOMNode().className, 'glyphicon glyphicon-remove');
+
     var addButton = ReactTestUtils.findRenderedDOMComponentWithTag(toolbar, 'a');
     var addButtonIcon = ReactTestUtils.findRenderedDOMComponentWithTag(addButton, 'span');
     assert.equal(addButtonIcon.getDOMNode().className, 'glyphicon glyphicon-plus');
@@ -32,7 +43,6 @@ describe('TaskList', function() {
     assert.equal(allCheckBox.getDOMNode().type, 'checkbox');
     assert.equal(columnNames[1].getDOMNode().innerText, 'Title');
     assert.equal(columnNames[2].getDOMNode().innerText, 'Due Date');
-    assert.equal(columnNames[3].getDOMNode().innerText, '');
 
     // table-content
     var tbody = ReactTestUtils.findRenderedDOMComponentWithTag(instance, 'tbody');
@@ -44,12 +54,5 @@ describe('TaskList', function() {
     assert.equal(record0CheckBox.getDOMNode().type, 'checkbox');
     assert.equal(record0Columns[1].getDOMNode().innerText, 'Study English');
     assert.equal(record0Columns[2].getDOMNode().innerText, '2015-02-23');
-    var record0Buttons = ReactTestUtils.scryRenderedDOMComponentsWithTag(record0Columns[3], 'a');
-    assert.equal(record0Buttons[0].getDOMNode().className, 'btn btn-default');
-    assert.equal(ReactTestUtils.findRenderedDOMComponentWithTag(record0Buttons[0], 'span').getDOMNode().className, 'glyphicon glyphicon-ok');
-    assert.equal(record0Buttons[1].getDOMNode().className, 'btn btn-default');
-    assert.equal(ReactTestUtils.findRenderedDOMComponentWithTag(record0Buttons[1], 'span').getDOMNode().className, 'glyphicon glyphicon-edit');
-    assert.equal(record0Buttons[2].getDOMNode().className, 'btn btn-default');
-    assert.equal(ReactTestUtils.findRenderedDOMComponentWithTag(record0Buttons[2], 'span').getDOMNode().className, 'glyphicon glyphicon-trash');
  });
 });

@@ -9,12 +9,29 @@ var TaskList = React.createClass({
         <header className="page-header">
           <h2>Tasks</h2>
         </header>
-        <div className="task-list-toolbar">
-          <a className="btn btn-primary pull-right">
-            <span className="glyphicon glyphicon-plus">
-            </span>
-          </a>
+        <div className="task-list-toolbar row">
+          <div className="btn-group col-xs-offset-1 col-xs-5" role="group">
+            <button type="button" className="btn btn-default">
+              <span className="glyphicon glyphicon-refresh">
+              </span>
+            </button>
+            <button type="button" className="btn btn-default">
+              <span className="glyphicon glyphicon-ok">
+              </span>
+            </button>
+            <button type="button" className="btn btn-default">
+              <span className="glyphicon glyphicon-remove">
+              </span>
+            </button>
+          </div>
+          <div className="btn-group col-xs-offset-5 col-xs-1" role="group">
+            <a className="btn btn-primary">
+               <span className="glyphicon glyphicon-plus">
+               </span>
+            </a>
+          </div>
         </div>
+        <hr/>
         <table className="table">
           <thead>
             <tr>
@@ -25,9 +42,8 @@ var TaskList = React.createClass({
                   </label>
                 </div>
               </th>
-              <th className="col-xs-7">Title</th>
+              <th className="col-xs-9">Title</th>
               <th className="col-xs-2">Due Date</th>
-              <th className="col-xs-2"></th>
             </tr>
           </thead>
           <tbody>
@@ -41,17 +57,6 @@ var TaskList = React.createClass({
               </td>
               <td>Study English</td>
               <td>2015-02-23</td>
-              <td>
-                <a className="btn btn-default">
-                  <span className="glyphicon glyphicon-ok"></span>
-                </a>
-                <a className="btn btn-default">
-                  <span className="glyphicon glyphicon-edit"></span>
-                </a>
-                <a className="btn btn-default">
-                  <span className="glyphicon glyphicon-trash"></span>
-                </a>
-              </td>
             </tr>
           </tbody>
         </table>
