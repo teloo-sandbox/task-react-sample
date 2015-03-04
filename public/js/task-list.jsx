@@ -9,7 +9,7 @@ var TaskList = React.createClass({
         <header className="page-header">
           <h2>Tasks</h2>
         </header>
-        <div>
+        <div className="task-list-toolbar">
           <a className="btn btn-primary pull-right">
             <span className="glyphicon glyphicon-plus">
             </span>
@@ -18,13 +18,27 @@ var TaskList = React.createClass({
         <table className="table">
           <thead>
             <tr>
-              <th className="col-xs-8">Title</th>
+              <th className="col-xs-1">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" />
+                  </label>
+                </div>
+              </th>
+              <th className="col-xs-7">Title</th>
               <th className="col-xs-2">Due Date</th>
               <th className="col-xs-2"></th>
             </tr>
           </thead>
           <tbody>
             <tr>
+              <td>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox" />
+                  </label>
+                </div>
+              </td>
               <td>Study English</td>
               <td>2015-02-23</td>
               <td>
