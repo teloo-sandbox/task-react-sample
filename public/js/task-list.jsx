@@ -42,8 +42,9 @@ var TaskList = React.createClass({
                   </label>
                 </div>
               </th>
-              <th className="col-xs-9">Title</th>
+              <th className="col-xs-8">Title</th>
               <th className="col-xs-2">Due Date</th>
+              <th className="col-xs-1"></th>
             </tr>
           </thead>
           <tbody>
@@ -55,8 +56,14 @@ var TaskList = React.createClass({
                   </label>
                 </div>
               </td>
-              <td>Study English</td>
+              <td><a>Study English</a></td>
               <td>2015-02-23</td>
+              <td>
+                <a className="btn btn-default">
+                  <span className="glyphicon glyphicon-edit">
+                  </span>
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>
